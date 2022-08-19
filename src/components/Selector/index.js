@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SwitchSelector from 'react-native-switch-selector';
-import { theColors } from '../../themes';
+import { theColors } from '@themes';
+
 const Selector = () => {
 	const { t, i18n } = useTranslation();
 

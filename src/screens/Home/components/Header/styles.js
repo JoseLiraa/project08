@@ -2,9 +2,6 @@ import { StyleSheet } from 'react-native';
 import { theColors } from '@themes';
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-	},
 	header: {
 		borderWidth: 1,
 		borderColor: theColors.gray2,
@@ -12,12 +9,8 @@ const styles = StyleSheet.create({
 	},
 	selector: {
 		marginVertical: '12%',
-		marginHorizontal: '25%',
-		width: '50%',
-	},
-	text: {
-		textAlign: 'center',
-		margin: 20,
+		marginHorizontal: '15%',
+		width: '70%',
 	},
 });
 
