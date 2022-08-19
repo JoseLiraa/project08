@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
 	header: {
 		borderWidth: 1,
 		borderColor: theColors.gray2,
-		height: '12%',
+		height: 110,
 	},
 	selector: {
 		marginVertical: '12%',

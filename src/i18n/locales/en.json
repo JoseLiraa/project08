@@ -1,7 +1,10 @@
 {
     "translation":{
         "home":{
-            "welcome": "Hi! this is a greeting"
+            "title": "Enter a title",
+            "description":"Enter a description",
+            "buttonTitle": "Post",
+            "userId": "User id"
         }       
     } 
 }
