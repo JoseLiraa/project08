@@ -13,6 +13,7 @@ const Home = () => {
 		<ScrollView style={styles.container}>
 			<Header />
 			<Form />
+			<Text style={styles.subTitle}>{t('home.subTitle')}</Text>
 			<Publications />
 		</ScrollView>
 	);

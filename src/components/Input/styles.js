@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
 		width: '80%',
 	},
 	singleInputContainer: {
-		backgroundColor: theColors.white,
+		backgroundColor: theColors.gray2,
 		marginTop: 24,
 		borderRadius: 10,
 		borderColor: theColors.white,

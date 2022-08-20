@@ -3,7 +3,7 @@ import { theColors } from '@themes';
 
 const styles = StyleSheet.create({
 	list: {
-		backgroundColor: theColors.white,
+		backgroundColor: theColors.gray3,
 		marginBottom: 20,
 	},
 });

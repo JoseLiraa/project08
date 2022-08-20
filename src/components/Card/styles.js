@@ -2,10 +2,14 @@ import { StyleSheet } from 'react-native';
 import { theColors } from '@themes';
 
 const styles = StyleSheet.create({
+	shadowProp: {
+		shadowColor: theColors.black,
+		shadowOffset: { width: 0, height: 5 },
+		shadowOpacity: 0.4,
+		shadowRadius: 5,
+	},
 	container: {
-		backgroundColor: theColors.gray4,
-		borderWidth: 1,
-		borderColor: theColors.green,
+		backgroundColor: theColors.white,
 		opacity: 0.7,
 		width: '90%',
 		borderRadius: 20,

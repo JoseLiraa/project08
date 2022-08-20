@@ -3,9 +3,11 @@ import { theColors } from '@themes';
 
 const styles = StyleSheet.create({
 	container: {
-		height: 360,
+		height: 300,
 		alignItems: 'center',
-		backgroundColor: theColors.gray4,
+		backgroundColor: theColors.gray3,
+		borderBottomColor: theColors.gray,
+		borderBottomWidth: 1,
 	},
 });
 

@@ -7,6 +7,7 @@ import Button from '@components/Button';
 import Input from '@components/Input';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import DropShadow from 'react-native-drop-shadow';
 
 const Form = () => {
 	const [email, setEmail] = useState('');
@@ -24,7 +25,7 @@ const Form = () => {
 			/>
 			<Input
 				multiline
-				maxLength={230}
+				maxLength={150}
 				placeholder={t('home.description')}
 				value={password}
 				onChangeText={setPassword}

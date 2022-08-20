@@ -3,9 +3,8 @@ import { theColors } from '@themes';
 
 const styles = StyleSheet.create({
 	header: {
-		borderWidth: 1,
-		borderColor: theColors.gray2,
 		height: 110,
+		backgroundColor: theColors.white,
 	},
 	selector: {
 		marginVertical: '12%',

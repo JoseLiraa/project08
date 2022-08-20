@@ -13,8 +13,10 @@ const styles = StyleSheet.create({
 		backgroundColor: theColors.green,
 		width: '100%',
 		padding: 15,
-		borderRadius: 10,
+		borderRadius: 15,
 		alignItems: 'center',
+		borderColor: theColors.white,
+		borderWidth: 1,
 	},
 	textButton: {
 		color: theColors.white,
