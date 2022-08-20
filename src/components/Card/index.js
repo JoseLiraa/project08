@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import styles from './styles';
 import DropShadow from 'react-native-drop-shadow';
 
-const Card = () => {
+const Card = ({ item }) => {
 	const { t, i18n } = useTranslation();
 
 	return (
@@ -12,23 +12,17 @@ const Card = () => {
 			<View style={styles.container}>
 				<View style={styles.idContainer}>
 					<View style={styles.userId}>
-						<Text>{t('home.userId')}:</Text>
-						<Text>4</Text>
+						<Text>{t('home.userId')}: </Text>
+						<Text>{item.userId}</Text>
 					</View>
 					<View style={styles.id}>
-						<Text>id:</Text>
-						<Text>4</Text>
+						<Text>id: </Text>
+						<Text>{item.id}</Text>
 					</View>
 				</View>
 				<View style={styles.infoContainer}>
-					<Text style={styles.title}>
-						nesciunt iure omnis dolorem tempora et accusantium
-					</Text>
-					<Text style={styles.description}>
-						consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem
-						ut quam aut nobis\net est aut quod aut provident voluptas autem
-						voluptas
-					</Text>
+					<Text style={styles.title}>{item.title}</Text>
+					<Text style={styles.description}>{item.body}</Text>
 				</View>
 			</View>
 		</DropShadow>
