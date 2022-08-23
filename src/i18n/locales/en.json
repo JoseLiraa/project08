@@ -5,6 +5,7 @@
             "description":"Enter a description",
             "buttonTitle": "Post",
             "userId": "User id",
+            "userName": "User",
             "subTitle": "Posts"
         }       
     } 

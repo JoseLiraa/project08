@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { View, Text, FlatList, ActivityIndicator } from 'react-native';
+import {
+	View,
+	Text,
+	FlatList,
+	ActivityIndicator,
+	TouchableOpacity,
+} from 'react-native';
 import Form from './components/Form';
 import Header from './components/Header';
-import Publications from './components/Publication';
 import { theColors } from '@themes';
 import styles from './styles';
 import Card from '@components/Card';
 import { axiosData } from '@api';
-import { postQuery } from '@constants';
+import { postQuery, usersQuery } from '@constants';
 
 const Home = () => {
 	const { t, i18n } = useTranslation();
 
 	const [postList, setPostList] = useState([]);
+	const [userList, setUserList] = useState(['']);
 	const [loadingIndicator, setLoadingIndicator] = useState(true);
 
 	useEffect(() => {
@@ -22,15 +28,21 @@ const Home = () => {
 				method: 'get',
 				url: postQuery,
 			});
+			const usersResponse = await axiosData({
+				method: 'get',
+				url: usersQuery,
+			});
 			const postArray = [];
+			const usersArray = [];
 			postArray.push(IdsResponse.data);
+			usersArray.push(usersResponse.data);
 			setPostList(postArray);
+			setUserList(usersArray);
 			setLoadingIndicator(false);
 		};
 		GetPost();
-	}, []);
+	}, [loadingIndicator]);
 
-	console.log(postList[0].length);
 	const keyExtractor = (item, index) => `${item}-${index}`;
 
 	return (
@@ -45,7 +57,14 @@ const Home = () => {
 				numColumns={1}
 				initialNumToRender={10}
 				maxToRenderPerBatch={10}
-				renderItem={({ item }) => <Card key={keyExtractor} item={item} />}
+				renderItem={({ item }) => (
+					<Card
+						key={keyExtractor}
+						item={item}
+						userList={userList[0]}
+						id={item.userId}
+					/>
+				)}
 				ListEmptyComponent={() => (
 					<>
 						{loadingIndicator && (

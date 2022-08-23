@@ -2,9 +2,9 @@ import { StyleSheet } from 'react-native';
 import { theColors } from '@themes';
 
 const styles = StyleSheet.create({
-	list: {
+	container: {
+		flex: 1,
 		backgroundColor: theColors.gray3,
-		marginBottom: 20,
 	},
 });
 

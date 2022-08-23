@@ -1,5 +1,6 @@
 import axios from 'axios';
+import Config from 'react-native-config';
 
 export const axiosData = axios.create({
-	baseURL: 'https://jsonplaceholder.typicode.com/',
+	baseURL: Config.API_URL,
 });

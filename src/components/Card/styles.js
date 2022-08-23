@@ -26,10 +26,6 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 	},
-	id: {
-		flexDirection: 'row',
-		justifyContent: 'space-between',
-	},
 	infoContainer: {
 		marginVertical: 10,
 		marginHorizontal: 10,
@@ -45,6 +41,13 @@ const styles = StyleSheet.create({
 		textAlign: 'justify',
 		color: theColors.subTitle,
 		fontSize: 12,
+	},
+	result: {
+		fontWeight: 'bold',
+		color: theColors.gray,
+	},
+	head: {
+		color: theColors.gray,
 	},
 });
 

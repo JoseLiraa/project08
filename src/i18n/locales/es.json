@@ -5,6 +5,7 @@
             "description":"Ingrese una descripción",
             "buttonTitle": "Publicar",
             "userId": "Id usuario",
+            "userName": "Usuario",
             "subTitle": "Publicaciones"
         }       
     } 
