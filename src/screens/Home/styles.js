@@ -6,14 +6,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: theColors.white,
 	},
-	subTitle: {
-		color: theColors.subTitle,
-		fontSize: 18,
-		fontWeight: 'bold',
-		marginHorizontal: 20,
-		marginTop: 20,
-		marginBottom: 8,
-	},
 });
 
 export default styles;

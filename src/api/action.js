@@ -6,3 +6,10 @@ export const Get = path => {
 		.then(res => res.data)
 		.catch(err => console.log(err));
 };
+
+export const Post = (path, data) => {
+	return axiosData
+		.post(path, data)
+		.then(res => res.data)
+		.catch(err => console.log(err));
+};

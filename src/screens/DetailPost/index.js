@@ -3,10 +3,10 @@ import { View, FlatList, Text, ActivityIndicator } from 'react-native';
 import Card from '@components/Card';
 import { theColors } from '@themes';
 import styles from './styles';
-import { axiosData } from '@api';
 import { getPath } from '@utils';
 import Comment from './components/comment';
 import { useTranslation } from 'react-i18next';
+import { Get } from '@api/action.js';
 
 const DetailPost = ({ route, navigation }) => {
 	const { item, userList } = route.params;
@@ -20,13 +20,8 @@ const DetailPost = ({ route, navigation }) => {
 
 	useEffect(() => {
 		const GetComment = async () => {
-			const CommentResponse = await axiosData({
-				method: 'get',
-				url: query,
-			});
-			const commentArray = [];
-			commentArray.push(CommentResponse.data);
-			setCommentList(commentArray);
+			const CommentResponse = await Get(query);
+			setCommentList(CommentResponse);
 			setLoadingIndicator(false);
 		};
 		GetComment();
@@ -46,7 +41,7 @@ const DetailPost = ({ route, navigation }) => {
 			<Text style={styles.subTitle}>{t('DetailPost.subTitle')}</Text>
 			<FlatList
 				contentContainerStyle={styles.list}
-				data={commentList[0]}
+				data={commentList}
 				keyExtractor={keyExtractor}
 				numColumns={1}
 				initialNumToRender={10}

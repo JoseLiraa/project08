@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
 		marginTop: 20,
 		marginBottom: 8,
 	},
+	activityIndicator: {
+		flex: 1,
+		marginVertical: '50%',
+	},
 });
 
 export default styles;
