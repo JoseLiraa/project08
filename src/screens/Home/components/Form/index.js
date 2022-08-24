@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { theColors } from '@themes';
 import { useTranslation } from 'react-i18next';
-import { userId } from '@utils';
+import { randomNumber } from '@utils';
 import styles from './styles';
 import Button from '@components/Button';
 import Input from '@components/Input';
@@ -16,6 +16,8 @@ const Form = () => {
 	const [description, setDescription] = useState('');
 	const { t, i18n } = useTranslation();
 
+	const getUserId = randomNumber(10);
+
 	const adding = () => {
 		if (title === '' || description === '') {
 			alert('Please type something!');
@@ -27,7 +29,7 @@ const Form = () => {
 					data: {
 						title,
 						body: description,
-						userId,
+						getUserId,
 					},
 				});
 				console.log(sendResponse.data);

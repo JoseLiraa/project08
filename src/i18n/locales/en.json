@@ -6,7 +6,13 @@
             "buttonTitle": "Post",
             "userId": "User id",
             "userName": "User",
-            "subTitle": "Posts"
+            "subTitle": "Posts",
+            "date": "published"
+        },
+        "DetailPost":{
+            "postId": "Post id",
+            "userEmail": "Email",
+            "subTitle": "Comments"
         }       
     } 
 }

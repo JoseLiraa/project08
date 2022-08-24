@@ -1,8 +1,15 @@
-export const userId = Math.floor(Math.random() * 10) + 1;
+import { postQuery } from '@constants';
+
+export const randomNumber = number => {
+	if (number) {
+		return Math.floor(Math.random() * number) + 1;
+	}
+	return null;
+};
 export const getPath = id => {
 	if (id) {
 		const coment = '/comments';
-		const concatPath = `${id}${coment}`;
+		const concatPath = `${postQuery}/${id}${coment}`;
 		return concatPath;
 	}
 	return null;

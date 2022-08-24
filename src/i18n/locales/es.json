@@ -6,7 +6,13 @@
             "buttonTitle": "Publicar",
             "userId": "Id usuario",
             "userName": "Usuario",
-            "subTitle": "Publicaciones"
+            "subTitle": "Publicaciones",
+            "date": "publicado"
+        },
+        "DetailPost":{
+            "postId": "Id publicación",
+            "userEmail": "Correo",
+            "subTitle": "Comentarios"
         }       
     } 
 }
